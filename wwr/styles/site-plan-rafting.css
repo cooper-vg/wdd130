@@ -244,3 +244,7 @@ footer p {
 footer p a:hover {
   text-decoration: underline;
 }
+.social-icon {
+  width: 1in;
+  height: auto;
+}
