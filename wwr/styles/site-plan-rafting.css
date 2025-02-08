@@ -232,19 +232,180 @@ footer a:hover {
 .icon {
   width: 80px;
 }
+#hero-box {
+  width: 100%; /* Ensures the container spans the full page */
+  overflow: hidden; /* Prevents unwanted scrollbars */
+}
+#hero { 
+  width: 100%;
+  height: auto;
+}
 #hero-img {
   width: 100%;
+  height: auto;
+  display: block;
 }
+
+
+
 nav a, .book, .join, footer a {
   text-decoration: none;
 }
-footer p {
-  font-size: 1.2em;
+
+footer {
+    display: flex; /* Enables flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+    background-color: #333; /* Dark footer background */
+    color: white; /* Text color */
+    padding: 15px 0; /* Adds vertical spacing */
+  }
+  
+  footer p {
+    margin: 5px 0; /* Reduces space between paragraphs */
+    font-size: 0.9em; /* Makes text slightly smaller */
+  }
+  
+  footer a {
+    color: #dcf763; /* Link color */
+    text-decoration: none; /* Removes underline */
+    margin: 5px; /* Reduces space around links */
 }
 footer p a:hover {
   text-decoration: underline;
 }
+.social {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Aligns items horizontally to the center */
+  gap: 15px; /* Adds space between the icons */
+  margin: 20px 0; /* Optional: Adds spacing above and below the container */
+  padding: 0; /* Removes extra padding */
+}
+
+.social a {
+  display: inline-block; /* Ensures the links behave as inline elements */
+  text-decoration: none; /* Removes underline (though icons usually won't have text) */
+}
+
 .social-icon {
-  width: 1in;
-  height: auto;
+  width: 40px; /* Sets a uniform width for the icons */
+  height: auto; /* Maintains aspect ratio */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.home-title {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+  font-size: 2em;
+}
+
+.msg {
+  background-color: #6f7364;
+  line-height: 1.5em;
+}
+body {
+    background-color: #fcfbfb;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
+}
+#logo_link {
+  padding-top: 5px;
+  float: left; /* Aligns the image to the left */
+  margin-right: 15px; /* Adds spacing between the image and the surrounding content */
+  width: auto; /* Ensures the image maintains its original width */
+  height: auto; /* Ensures the aspect ratio is preserved */
+  display: block; /* Ensures the image does not behave as inline content */
+}
+
+nav a {
+  padding: 35px;
+}
+
+.book, .join {
+  padding: 15px 30px;
+}
+
+.icon {
+  padding-top: 10px;
+}
+
+.msg {
+  padding: 35px;
+}
+
+.msg p {
+  padding-bottom: 15px;
+}
+
+footer {
+  padding: 25px 50px;
+}
+
+footer .social img {
+  padding-top: 15px;
+}
+.home-title {
+  margin-top: 10px;
+}
+
+.book, .join {
+  margin-top: 50px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+  margin: 200px 0;
+}
+
+footer {
+  margin-top: 200px;
+}
+.book, .join {
+  border-radius: 5px;
+  background-color: #d9c2a3;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.card-img {
+  border: 10px solid #d9c2a3;
+}
+
+main section img {
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  flex-direction: row; /* Stacks the links vertically */
+  justify-content: flex-start;
+  align-items: center; /* Aligns the links to the left */
+  gap: 15px
+}
+
+nav a {
+  text-decoration: none; /* Removes underline from the links */
+  color: #333; /* Sets the text color (adjust as needed) */
+  font-size: 0.9em; /* Makes the font thinner/smaller */
+  padding: 5px 10px; /* Adds vertical spacing between the links */
+  display: inline-block; /* Ensures each link is treated as a block-level element */
+  margin: 0; /* Removes extra margin */
+}
+.msg p {
+  color: black; /* Sets the text color to black */
+  font-size: 1em; /* Adjusts text size (optional) */
+  line-height: 1.5; /* Improves readability (optional) */
+  margin: 10px 0; /* Adds spacing around the paragraph */
 }
