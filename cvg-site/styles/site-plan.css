@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #485696;
-  --secondary-color: #fc7a1e ;
+  --secondary-color: #fc7a1e;
   --accent1-color: #e7e7e7;
   --accent2-color: #f24c00;
   --heading-font: "IM Fell French Canon SC";
@@ -24,6 +24,7 @@ body {
   padding: 4em;
   font-size: 18px;
   text-align: center;
+  font-family: var(--paragraph-font);
 }
 
 img {
@@ -53,16 +54,15 @@ hr {
 header {
   padding: 1em;
   text-align: center;
-  color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
 }
 
-header > h1, header > h2 {
+header h1, header h2 {
   color: var(--headline-color-on-color);
 }
 
 p {
-  font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
   line-height: 1.6em;
@@ -83,6 +83,7 @@ nav {
   gap: 1em;
   padding: 0;
   margin: 0;
+  flex-direction: row;
 }
 
 .nav-list li {
@@ -95,7 +96,8 @@ nav {
   display: inline-block;
 }
 
-.nav-list a:link, .nav-list a:visited {
+.nav-list a:link,
+.nav-list a:visited {
   color: var(--nav-link-color);
 }
 
@@ -115,32 +117,114 @@ footer {
 
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 2em;
-  align-items: center;
+  align-items: start;
   margin-top: 2em;
 }
 
-.intro {
-  background-color: var(--accent1-color);
-  padding: 2em;
-  border-radius: 8px;
-}
-
-.intro-img {
-  padding: 2em;
+.resume-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2em;
+  align-items: stretch;
+  margin-top: 2em;
 }
 
 @media screen and (max-width: 768px) {
-  .home-grid {
+  .home-grid,
+  .resume-grid {
     grid-template-columns: 1fr;
   }
+
   .nav-list {
     flex-direction: column;
   }
+
+  .bullet-list {
+    columns: 1;
+  }
 }
+
+.intro {
+  max-width: 100%;
+  line-height: 1.8;
+  padding: 2em;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 0.75em auto;
+  padding: 0;
+}
+
+.intro-img,
+.resume-grid .intro-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  height: 100%;
+}
+
+.intro-img img {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .resume-heading {
   font-size: 1.5em;
   text-decoration: underline;
   margin-top: 1.5em;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links li a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-links li a:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.intro ul {
+  padding-left: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.intro li {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.bullet-list {
+  columns: 2;
+  column-gap: 2em;
+  list-style-type: disc;
+}
+
+.compact-resume {
+  line-height: 1.4;
+}
+
+.resume-block {
+  margin-bottom: 0.75em;
 }
